@@ -121,7 +121,7 @@ there were also a few [enduring business themes][depot-storage] for this domain:
 [depot-safety]: depot-designs/depot-storage.svg
 [storage-drums]: depot-designs/storage-drums.svg
 [depot-buildings]: depot-designs/depot-buildings.svg
-[syntopica-tool]: https://gitlab.com/nikboyd/syntopica/-/tree/master#syntopica
+[syntopica-tool]: https://github.com/nikboyd/syntopica/#syntopica
 [hoot-smalltalk]: https://gitlab.com/hoot-smalltalk/hoot-smalltalk#hoot-smalltalk
 
 [code-sketches]: depot-models/README.md#eco-depot-model-classes
