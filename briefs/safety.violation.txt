@@ -1,0 +1,42 @@
+[Quote:][narrative]
+"While the EPA requires that type 1 and type 2 must not be stored in the same building,
+type 3 can be stored with either type 1 or type 2.
+If either of these regulations is violated, then the EPA will close the depot as unsafe, pending emergency action."
+
+### Derivations
+
+<table>
+<tr><th align="left"> Phrases </th><th align="left"> Derivations </th></tr>
+<tr>
+<td style="vertical-align:top">
+
+* “stored” = _stores_
+* unsafe – un + ty = safety
+* complies – s + ance = safety compliance
+* violated – ed + ion = safety violation
+
+</td>
+<td style="vertical-align:top">
+
+* so: a building _stores_ type 1, type 2, or type 3
+* so: the EPA publishes safety regulations
+* so: the EPA requires safety compliance
+* so: a safety regulation defines safety violation
+
+</td>
+</tr>
+</table>
+
+### Implications
+
+* the EPA will close the depot if a safety violation occurs
+* the EPA will reopen the depot only after the depot restores safety compliance
+* a depot closure thereafter requires emergency corrective action by the depot
+
+### Compliance
+
+* safety compliance exists if a building that stores type 3 also stores type 1
+* safety compliance exists if a building that stores type 3 also stores type 2
+* a safety violation exists if a building that stores type 1 also stores type 2
+
+[narrative]: ../original-narrative.md#depot-safety

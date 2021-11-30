@@ -1,0 +1,46 @@
+<svg width="12cm" height="12cm" viewbox="10 8 350 400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><a xlink:href="../topics/depot.map.md"><g><rect style="fill: #add8e6" x="10" y="10" width="200" height="44"/>
+<rect style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000" x="10" y="10" width="200" height="44"/>
+<text style="fill: #000000; text-anchor: middle; font-family: sans-serif; font-style: normal; font-weight: 700" font-size="17" x="110" y="37"><tspan x="110" y="37">depot map</tspan>
+</text>
+</g>
+</a>
+<a xlink:href="../topics/building.md"><g><rect style="fill: #bfbfbf" x="230" y="100" width="200" height="44"/>
+<rect style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000" x="230" y="100" width="200" height="44"/>
+<text style="fill: #000000; text-anchor: middle; font-family: sans-serif; font-style: normal; font-weight: 700" font-size="17" x="330" y="127"><tspan x="330" y="127">building</tspan>
+</text>
+</g>
+</a>
+<a xlink:href="../topics/depot.md"><g><rect style="fill: #bfbfbf" x="230" y="200" width="200" height="44"/>
+<rect style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000" x="230" y="200" width="200" height="44"/>
+<text style="fill: #000000; text-anchor: middle; font-family: sans-serif; font-style: normal; font-weight: 700" font-size="17" x="330" y="227"><tspan x="330" y="227">depot</tspan>
+</text>
+</g>
+</a>
+<a xlink:href="../topics/name.md"><g><rect style="fill: #bfbfbf" x="230" y="300" width="200" height="44"/>
+<rect style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000" x="230" y="300" width="200" height="44"/>
+<text style="fill: #000000; text-anchor: middle; font-family: sans-serif; font-style: normal; font-weight: 700" font-size="17" x="330" y="327"><tspan x="330" y="327">name</tspan>
+</text>
+</g>
+</a>
+<g><polyline style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000" points="230,122 110,122 110,54"/>
+<polygon points="230,122 215,132 215,112" style="fill: #000000"/>
+<g><rect style="fill: #ffffff" x="145" y="109" width="50" height="26"/>
+<text style="fill: #000000; text-anchor: middle; font-family: sans-serif; font-style: italic; font-weight: normal" font-size="18" x="0" y="0"><tspan x="170" y="126">names</tspan>
+</text>
+</g>
+</g>
+<g><polyline style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000" points="215,222 110,222 110,54"/>
+<polygon points="230,222 215,232 215,212" style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000"/>
+<g><rect style="fill: #ffffff" x="160" y="209" width="20" height="26"/>
+<text style="fill: #000000; text-anchor: middle; font-family: sans-serif; font-style: italic; font-weight: normal" font-size="18" x="0" y="0"><tspan x="170" y="226">in</tspan>
+</text>
+</g>
+</g>
+<g><polyline style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000" points="215,322 110,322 110,54"/>
+<polygon points="230,322 215,332 215,312" style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000"/>
+<g><rect style="fill: #ffffff" x="150" y="309" width="40" height="26"/>
+<text style="fill: #000000; text-anchor: middle; font-family: sans-serif; font-style: italic; font-weight: normal" font-size="18" x="0" y="0"><tspan x="170" y="326">with</tspan>
+</text>
+</g>
+</g>
+</svg>

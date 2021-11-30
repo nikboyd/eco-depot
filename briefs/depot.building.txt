@@ -1,0 +1,54 @@
+[Quote:][narrative]
+"The drums are stored in special storage buildings; in the depot there are also buildings that house scientific
+and administrative staff."
+
+### Derivations
+
+<table>
+<tr><th align="left"> Phrases </th><th align="left"> Derivations </th></tr>
+<tr>
+<td style="vertical-align:top">
+
+* “drums are stored” = _stores_
+* 
+
+</td>
+<td style="vertical-align:top">
+
+* so: special storage buildings _store_ drums
+* also: staff buildings _house_ scientific and administrative staff
+
+</td>
+</tr>
+</table>
+
+
+### Implications
+
+* the ECO depot _contains_ both storage buildings and staff buildings
+* a staff building _houses_ some staff members
+* a storage building _stores_ some drums
+
+### Additional Concepts
+
+There are holes evident in the original narrative. Many of them were filled during the analysis
+through _semantic implication_. However, a few important elements of the domain are still missing.
+Also, several depot management system use-cases are implied.
+We need to make those use-cases explicit and supply the missing domain elements.
+
+_Where is each building located?_
+* a depot map locates the depot buildings
+* their physical locations determine which buildings neighbor each other
+
+_How is the building information maintained?_
+* for each storage building, a depot manager enters building description into the system
+
+Each building description includes:
+* a (unique) building identifier
+* a physical description, including physical dimensions
+* a physical location of the building within the depot, its address
+* building identifiers of the neighboring buildings, in the depot map
+* a drum storage limit from the building’s drum storage license
+* an initial drum inventory
+
+[narrative]: ../original-narrative.md#drum-storage

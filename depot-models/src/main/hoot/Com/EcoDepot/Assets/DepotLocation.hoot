@@ -1,0 +1,29 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Hoot Geometry importAll.
+Com EcoDepot Measures importAll.
+
+Object subclass: DepotLocation.
+"A location with the ECO depot."
+
+DepotLocation class members: "knowing distance policies" [
+
+    "the building vulnerability perimeter distance."
+    Distance! vulnerabilityPerimeter [ ^Meter type distance: 5.0 ]
+]
+
+DepotLocation members: "knowing location" [
+
+    @Property! String! address.
+    @Property! Rectangle! bounds.
+
+    Rectangle! expandedPerimeter [ 
+        Int! perimeter := self type vulnerabilityPerimeter amount floor asPrimitive.
+        Rectangle! bounds := Rectangle origin: self bounds origin extent: self bounds extent.
+        bounds primitiveRectangle grow: perimeter : perimeter.
+        ^bounds ]
+
+    Boolean! neighbors: DepotLocation! location [
+        ^self expandedPerimeter intersects: location expandedPerimeter ]
+]

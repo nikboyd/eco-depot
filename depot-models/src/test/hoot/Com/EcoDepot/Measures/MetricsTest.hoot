@@ -1,0 +1,23 @@
+@Notice :'Copyright 2004,2021 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Hoot Magnitudes Float import.
+Hoot Streams Transcript import.
+Org Junit lowerCase importAll.
+
+nil subclass: MetricsTest.
+"Confirms proper operation of measurement types."
+
+MetricsTest members: [
+
+    Transcript! log [ ^Transcript log ]
+
+    @Test! Void! testMeasures [
+        self log cr.
+        self log printLine: (Meter type distance: 10.12) printString.
+        self log printLine: (Liter type volume:   10.34) printString.
+        self log printLine: (Gram  type weight:   10.56) printString.
+        self log cr.
+    ]
+]
+

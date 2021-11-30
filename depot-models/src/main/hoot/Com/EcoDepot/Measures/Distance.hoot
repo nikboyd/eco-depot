@@ -1,0 +1,14 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Quantity subclass: Distance.
+"A quantified distance."
+
+Distance class members: []
+Distance members: [
+
+    Distance: Fixed! distance [ super : distance. ]
+
+    @Static! Meter! ReferenceUnit := Meter basicNew.
+    Unit! unit [ ^ReferenceUnit ]
+]

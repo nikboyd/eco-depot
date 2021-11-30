@@ -1,0 +1,34 @@
+[Quote:][narrative]
+"The ECO storage depot operates in accordance with the Environmental Protection Agency EPA regulations controlling
+the storage of environmentally damaging chemicals."
+
+[Quote:][delivery]
+"When a truck arrives at the loading bay, the clerk enters the manifest accompanying the load and
+checks in the drums one at a time."
+
+
+### Derivations
+
+<table>
+<tr><th align="left"> Phrases </th><th align="left"> Derivations </th></tr>
+<tr>
+<td style="vertical-align:top">
+
+* a truck arrives at the loading bay
+* "environmentally damaging" = **hazardous**
+* “operates in accordance with” = _complies with_
+
+</td>
+<td style="vertical-align:top">
+
+* so: the ECO depot _contains_ a loading bay
+* so: the ECO depot is a hazardous chemical storage facility
+* so: the ECO depot _complies with_ EPA hazardous chemical storage regulations
+
+</td>
+</tr>
+</table>
+
+
+[narrative]: ../original-narrative.md#eco-depot
+[delivery]: ../original-narrative.md#drum-delivery

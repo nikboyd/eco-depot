@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://maven.apache.org/POM/4.0.0
+        http://maven.apache.org/xsd/maven-4.0.0.xsd
+        ">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.educery</groupId>
+    <artifactId>eco-depot</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>depot-models</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>hoot-libs</id>
+            <url>https://maven.cloudsmith.io/educery/hoot-libs/</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>hoot-libs</id>
+            <url>https://maven.cloudsmith.io/educery/hoot-libs/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>hoot-smalltalk</groupId>
+                <artifactId>hoot-libs-bundle</artifactId>
+                <version>2021.0204.1400</version>
+            </dependency>
+            <dependency>
+                <groupId>hoot-smalltalk</groupId>
+                <artifactId>hoot-compiler-bundle</artifactId>
+                <version>2021.0204.1400</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>hoot-smalltalk</groupId>
+                    <artifactId>hoot-maven-plugin</artifactId>
+                    <version>2021.0204.1400</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>hoot-smalltalk</groupId>
+                            <artifactId>hoot-compiler-bundle</artifactId>
+                            <version>2021.0204.1400</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>java-1.8</id>
+            <activation>
+                <jdk>1.8</jdk>
+            </activation>
+            <properties>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>java-9-10-support-1.8</id>
+            <activation>
+                <jdk>[9,11)</jdk>
+            </activation>
+            <properties>
+                <maven.compiler.source>1.8</maven.compiler.source>
+                <maven.compiler.target>1.8</maven.compiler.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>java-11-plus</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+                <jdk>[11,)</jdk>
+            </activation>
+            <properties>
+                <maven.compiler.release>11</maven.compiler.release>
+            </properties>
+        </profile>
+    </profiles>
+</project>

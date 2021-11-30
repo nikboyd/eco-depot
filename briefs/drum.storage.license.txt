@@ -1,0 +1,47 @@
+[Quote:][narrative]
+"The ECO depot is only licensed to store drums of chemicals classified as EPA hazard type 1, type 2, or type 3."
+
+### Derivations
+
+<table>
+<tr><th align="left"> Phrases </th><th align="left"> Derivations </th></tr>
+<tr>
+<td style="vertical-align:top">
+
+* “licensed to store” = _stores_
+* “drums of chemicals” = _contain_
+* 
+* “chemicals classified” = _classifies_
+* “licensed to store” = **storage license**
+
+</td>
+<td style="vertical-align:top">
+
+* so: the ECO depot _stores_ drums
+* so: drums _contain_ hazardous chemicals,
+* and: a storage drum _contains_ a hazardous chemical
+* so: the EPA _classifies_ hazardous chemicals with EPA hazard types
+* so: the EPA _issues_ a storage license to a storage facility
+
+</td>
+</tr>
+</table>
+
+### Implications
+
+* an EPA hazard type describes a hazardous chemical
+* EPA hazard types = type 1, type 2, type 3
+* a storage facility stores drums (containing hazardous chemicals)
+* a storage license permits storage of specific chemical types
+
+### Open Questions
+
+* How often does the EPA renew the licenses? Quarterly? Annually?
+* What are the renewal criteria? Physical inspection and certification?
+* Does ECO want to store more types of hazardous chemicals?
+* How would it qualify? Three years of continuous safety certifications?
+* Can a storage license be revoked? What are the consequences?
+* What about leaks and spills? How are they handled? What consequences?
+* How long does each drum last? How are old drums replaced and recycled?
+
+[narrative]: ../original-narrative.md#depot-licensing

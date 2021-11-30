@@ -1,0 +1,21 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Hoot Magnitudes Integer import.
+Hoot Streams Transcript import.
+Org Junit lowerCase importAll.
+
+nil subclass: HazardTest.
+"Confirms proper operation of hazard types."
+
+HazardTest members: [
+
+    @Before! Void! prepare [ HazardKind initializeRegistry. ]
+    Transcript! log [ ^Transcript log ]
+
+    @Test! Void! testHazards [
+        self log cr.
+        HazardKind types do: [ :HazardKind! kind | self log printLine: kind printString. ].
+        self log cr.
+    ]
+]

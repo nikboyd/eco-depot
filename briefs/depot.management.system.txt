@@ -1,0 +1,64 @@
+[Quote:][narrative]
+"The management has decided to install a computerized system to manage and control the depot.
+It is a paramount concern that the system never allow the depot to become unsafe."
+
+### Derivations
+
+<table>
+<tr><th align="left"> Phrases </th><th align="left"> Derivations </th></tr>
+<tr>
+<td style="vertical-align:top">
+
+* “never allow” = _prevents_
+* “become unsafe” = **safety violation**
+* manage + ment = management + system + depot = depot management system
+
+</td>
+<td style="vertical-align:top">
+
+* 
+* 
+* so: the depot management system _prevents_ a safety violation
+
+</td>
+</tr>
+</table>
+
+### Mission Themes
+
+* the depot management system _prevents_ a safety violation
+
+### Additional Concepts
+
+There are holes evident in the original narrative. Many of them were filled during the analysis
+through _semantic implication_. However, a few important elements of the domain are still missing.
+Also, several depot management system use-cases are implied.
+We need to make those use-cases explicit and supply the missing domain elements.
+
+_How does the depot manager **manage** the depot?_
+* the system presents the available depot management operations to a depot manager
+* a depot manager selects depot status report from the depot management operations
+* the system presents a depot status report
+
+_What data does a depot status report provide?_
+
+Each depot status report lists:
+* each building that has an EPA safety violation
+* a building summary for each storage building
+* pairs of vulnerable buildings
+
+A building summary includes:
+* a building identifier
+* a building drum storage limit
+* a building drum inventory summary
+* a drum count for each stored hazard type
+
+_How does the depot manager **maintain** depot building data?_
+* a depot manager selects building maintenance from the depot management operations
+
+_What are the essential usage cases for the following operations?_
+* adding a building – storage / staff
+* updating the drum inventory of a storage building
+* removing a building – storage / staff (needed?)
+
+[narrative]: ../original-narrative.md#depot-management

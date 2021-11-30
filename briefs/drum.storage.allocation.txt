@@ -1,0 +1,47 @@
+[Quote:][narrative]
+"Once all the drums have been checked in, any discrepancies between the checked load and the manifest
+are reported to the loading bay clerk.
+The system then produces a drum-to-building allocation list that says where each drum is to be stored.
+The loading bay clerk is notified of any drums that must be returned to the truck because of lack of space."
+
+### Derivations
+
+* a loading bay clerk checks all the drums
+* the system reports any discrepancies to a loading bay clerk
+* the system produces a drum-to-building allocation list
+* a drum-to-building allocation list says in which storage building to store each drum
+* the system notifies a loading bay clerk of any returned drums
+
+### Implications
+
+* a loading bay clerk notifies the system of a checked drum load
+* the system produces a discrepancy report for a loading bay clerk
+* the system produces a drum allocation report for a loading bay clerk
+* a drum storage allocation report lists the drum storage allocations for a drum load
+* a drum storage allocation identifies the storage building for each accepted drum
+* the system allocates some drums to a storage building
+* the system produces a returned drum report for a loading bay clerk
+
+### Additional Concepts
+
+There are holes evident in the original narrative. Many of them were filled during the analysis
+through _semantic implication_. However, a few important elements of the domain are still missing.
+Also, several depot management system use-cases are implied.
+We need to make those use-cases explicit and supply the missing domain elements.
+
+_What is a discrepancy?_
+* a discrepancy exists when a checked load drum count does not match the delivery manifest drum count
+
+A discrepancy report lists:
+* the drum load EPA hazard type
+* the checked load drum count
+* the delivery manifest drum count
+* difference between them
+
+_What is a returned drum report?_
+
+A returned drum report lists:
+* the drum load EPA hazard type
+* the returned drum count
+
+[narrative]: ../original-narrative.md#drum-storage-allocation

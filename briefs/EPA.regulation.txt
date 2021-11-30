@@ -1,0 +1,37 @@
+[Quote:][narrative]
+"The ECO storage depot operates in accordance with the Environmental Protection Agency EPA regulations controlling
+the storage of environmentally damaging chemicals."
+
+### Derivations
+
+<table>
+<tr><th align="left"> Phrases </th><th align="left"> Derivations </th></tr>
+<tr>
+<td style="vertical-align:top">
+
+* "environmentally damaging" = **hazardous**
+* “operates in accordance with” = _complies with_
+
+</td>
+<td style="vertical-align:top">
+
+* so: EPA regulations control **hazardous** chemical storage
+* so: the ECO storage depot _complies with_ EPA hazardous chemical storage regulations
+
+</td>
+</tr>
+</table>
+
+### Implications
+
+* The ECO storage depot is a hazardous chemical storage facility
+* The EPA _regulates_ hazardous chemical storage facilities
+* The EPA _publishes_ hazardous chemical storage regulations
+
+### Open Questions
+
+* How often are the EPA regulations issued and revised?
+* How are storage facilities notified of regulatory changes?
+* How will the system rules be validated against regulatory changes?
+
+[narrative]: ../original-narrative.md#eco-depot

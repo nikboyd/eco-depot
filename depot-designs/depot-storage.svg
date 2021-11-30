@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="33cm" height="30cm" viewBox="38 20 651 598" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="180" y="20" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="180" y="20" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="254.6" y="34">Depot Safety</text>
+    <rect style="fill: #ffffff" x="180" y="38" width="149.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="180" y="38" width="149.2" height="20"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="185.5" cy="48" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="189.5" y="54">                </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="60" y="180" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="60" y="180" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="134.6" y="194">Storage Allocation</text>
+    <rect style="fill: #ffffff" x="60" y="198" width="149.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="60" y="198" width="149.2" height="20"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="65.5" cy="208" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="69.5" y="214">drumCount</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="148.8" y="214">Integer</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="280" y="160" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="280" y="160" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="354.6" y="174">Depot Location</text>
+    <rect style="fill: #ffffff" x="280" y="178" width="149.2" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="280" y="178" width="149.2" height="36"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="285" cy="188" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="289" y="194">address</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="352.9" y="194">String</text>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="285" cy="204" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="289" y="210">bounds</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="352.9" y="210">Rectangle</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="540" y="160" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="540" y="160" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="614.6" y="174">Depot Building</text>
+    <rect style="fill: #ffffff" x="540" y="178" width="149.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="540" y="178" width="149.2" height="20"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="545.5" cy="188" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="549.5" y="194">id        </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="636.5" y="194">String</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="320" y="300" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="320" y="300" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="394.6" y="314">Storage Building</text>
+    <rect style="fill: #ffffff" x="320" y="318" width="149.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="320" y="318" width="149.2" height="20"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="325.5" cy="328" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="329.5" y="334">                </text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="438.936,188 520,188 520,169 540,169 "/>
+    <polygon style="fill: #000000" points="431.436,188 441.436,183 438.936,188 441.436,193 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="431.436,188 441.436,183 438.936,188 441.436,193 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="440" y="180">
+    <tspan x="440" y="180">location</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="394.6,300 394.6,260 614.6,260 614.6,226.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="627.6,226.236 614.6,200.236 601.6,226.236 "/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="320" y="440" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="320" y="440" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="394.6" y="454">Drum Storage</text>
+    <rect style="fill: #ffffff" x="320" y="458" width="149.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="320" y="458" width="149.2" height="20"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="325.5" cy="468" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="329.5" y="474">                </text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="540" y="500" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="540" y="500" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="614.6" y="514">Drum</text>
+    <rect style="fill: #ffffff" x="540" y="518" width="149.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="540" y="518" width="149.2" height="20"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="545" cy="528" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="549" y="534">id        </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="636" y="534">String</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="469.2,449 614.6,449 614.6,476 "/>
+    <polygon style="fill: #000000" points="608.6,488 614.6,500 620.6,488 "/>
+    <polygon style="fill: #000000" points="608.6,476 614.6,488 620.6,476 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="500" y="440">
+    <tspan x="500" y="440">inventory</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="394.6,338 394.6,391 394.6,391 394.6,416 "/>
+    <polygon style="fill: #000000" points="388.6,428 394.6,440 400.6,428 "/>
+    <polygon style="fill: #000000" points="388.6,416 394.6,428 400.6,416 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:end;font-family:sans-serif;font-style:normal;font-weight:700" x="380" y="380">
+    <tspan x="380" y="380">storage [</tspan>
+    <tspan x="380" y="396">type1, </tspan>
+    <tspan x="380" y="412">type2, </tspan>
+    <tspan x="380" y="428">type3 ]</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="60" y="340" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="60" y="340" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="134.6" y="354">Storage License</text>
+    <rect style="fill: #ffffff" x="60" y="358" width="149.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="60" y="358" width="149.2" height="20"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="65.5" cy="368" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="69.5" y="374">limit    </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="148.8" y="374">Integer</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="320,449 171.9,449 171.9,387.736 "/>
+    <polygon style="fill: #000000" points="171.9,380.236 176.9,390.236 171.9,387.736 166.9,390.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="171.9,380.236 176.9,390.236 171.9,387.736 166.9,390.236 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="180" y="440">
+    <tspan x="180" y="440">license</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="140" y="500" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="140" y="500" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="214.6" y="514">Hazard Kind</text>
+    <rect style="fill: #ffffff" x="140" y="518" width="149.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 3; stroke: #000000" x="140" y="518" width="149.2" height="20"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="145.5" cy="528" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="149.5" y="534">type     </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="228.8" y="534">Integer</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="320" y="580" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="320" y="580" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="394.6" y="594">Chemical</text>
+    <rect style="fill: #ffffff" x="320" y="598" width="149.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="320" y="598" width="149.2" height="20"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="325" cy="608" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="329" y="614">name      </text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="416" y="614">String</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="214.6,547.736 214.6,589 320,589 "/>
+    <polygon style="fill: #000000" points="214.6,540.236 219.6,550.236 214.6,547.736 209.6,550.236 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="214.6,540.236 219.6,550.236 214.6,547.736 209.6,550.236 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="220" y="580">
+    <tspan x="220" y="580">hazard</tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="100" y="400">
+    <tspan x="100" y="400">hazard</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="209.2,349 240,349 240,328 310.264,328 "/>
+    <polygon style="fill: #000000" points="317.764,328 307.764,333 310.264,328 307.764,323 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="317.764,328 307.764,333 310.264,328 307.764,323 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="220" y="380">
+    <tspan x="220" y="380">building </tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="97.3,378 97.3,509 130.264,509 "/>
+    <polygon style="fill: #000000" points="137.764,509 127.764,514 130.264,509 127.764,504 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="137.764,509 127.764,514 130.264,509 127.764,504 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="577.3,538 577.3,589 478.936,589 "/>
+    <polygon style="fill: #000000" points="471.436,589 481.436,584 478.936,589 481.436,594 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="471.436,589 481.436,584 478.936,589 481.436,594 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="480" y="580">
+    <tspan x="480" y="580">chemical</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="171.9,218 171.9,309 310.264,309 "/>
+    <polygon style="fill: #000000" points="317.764,309 307.764,314 310.264,309 307.764,304 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="317.764,309 307.764,314 310.264,309 307.764,304 "/>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="97.3,218 100,218 100,306 40,306 40,528 130.264,528 "/>
+    <polygon style="fill: #000000" points="137.764,528 127.764,533 130.264,528 127.764,523 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="137.764,528 127.764,533 130.264,528 127.764,523 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="180" y="240">
+    <tspan x="180" y="240">building </tspan>
+  </text>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="40" y="240">
+    <tspan x="40" y="240">hazard</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" points="217.3,58 217.3,119 134.6,119 134.6,170.264 "/>
+    <polygon style="fill: #000000" points="134.6,177.764 129.6,167.764 134.6,170.264 139.6,167.764 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="134.6,177.764 129.6,167.764 134.6,170.264 139.6,167.764 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:italic;font-weight:700" x="140" y="100">
+    <tspan x="140" y="100">manages</tspan>
+  </text>
+  <g>
+    <rect style="fill: #ffffff" x="540" y="80" width="149.2" height="18"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="540" y="80" width="149.2" height="18"/>
+    <text font-size="11.2" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="614.6" y="94">Distance</text>
+    <rect style="fill: #ffffff" x="540" y="98" width="149.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="540" y="98" width="149.2" height="20"/>
+    <ellipse style="fill: none; fill-opacity:0; stroke-width: 0.2; stroke: #000000" cx="545" cy="108" rx="2" ry="2"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="549" y="114">amount</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="605.2" y="114">FixedPoint</text>
+  </g>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" points="391.9,160 391.9,108 530.264,108 "/>
+    <polygon style="fill: #000000" points="537.764,108 527.764,113 530.264,108 527.764,103 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="537.764,108 527.764,113 530.264,108 527.764,103 "/>
+  </g>
+  <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:sans-serif;font-style:normal;font-weight:700" x="280" y="120">
+    <tspan x="280" y="120">vulnerability</tspan>
+    <tspan x="280" y="136">perimeter</tspan>
+  </text>
+  <g>
+    <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke-dasharray: 4; stroke: #000000" points="291.9,58 291.9,89 530.264,89 "/>
+    <polygon style="fill: #000000" points="537.764,89 527.764,94 530.264,89 527.764,84 "/>
+    <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="537.764,89 527.764,94 530.264,89 527.764,84 "/>
+  </g>
+</svg>

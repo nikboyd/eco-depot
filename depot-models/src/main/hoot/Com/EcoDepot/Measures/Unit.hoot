@@ -1,0 +1,15 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Object subclass: Unit.
+"A unit of measure."
+
+Unit class members: [
+
+    @Protected! Hoot Magnitudes Integer! StandardPrecision := 4.
+]
+
+Unit members:
+[
+    @Primitive! String! printString [ ^String from: self getClass getSimpleName toLowerCase + 's' ]
+]

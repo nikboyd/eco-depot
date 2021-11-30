@@ -1,0 +1,13 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Unit subclass: Liter.
+"A metric volume measurement."
+
+Liter class members: [
+
+    Volume! volume: Hoot Magnitudes Float! volume [ ^self volume: (volume asFixedPoint: StandardPrecision) ]
+    Volume! volume: Fixed! volume [ ^Volume basicNew: volume ]
+]
+
+Liter members: []

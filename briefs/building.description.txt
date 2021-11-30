@@ -1,0 +1,24 @@
+[Quote:][narrative]
+"The drums are stored in special storage buildings; in the depot there are also buildings that house scientific
+and administrative staff."
+
+### Derivations
+
+See [Depot Building][building]
+
+### Additional Concepts
+
+_Where is each building located?_
+* a depot map locates the depot buildings
+* their physical locations determine which buildings neighbor each other
+
+Each building description includes:
+* a (unique) building identifier
+* a physical description, including physical dimensions
+* a physical location of the building within the depot, its address
+* building identifiers of the neighboring buildings, in the depot map
+* a drum storage limit from the building’s drum storage license
+* an initial drum inventory
+
+[narrative]: ../original-narrative.md#drum-storage
+[building]:depot.building.md

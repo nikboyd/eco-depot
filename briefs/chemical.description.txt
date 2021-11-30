@@ -1,0 +1,10 @@
+See [Hazardous Chemical](hazardous.chemical.md)
+
+### Implications
+
+Each chemical drum is labeled with its description:
+
+* chemical name
+* volume (in gallons, the depot volume unit)
+* weight (in pounds, the depot weight unit)
+* hazard type

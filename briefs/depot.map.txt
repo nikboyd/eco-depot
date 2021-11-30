@@ -1,0 +1,3 @@
+See **Additional Concepts** in [Depot Building][map-concept]
+
+[map-concept]:depot.building.md#additional-concepts

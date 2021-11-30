@@ -1,0 +1,14 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Quantity subclass: Volume.
+"A quantified liquid volume."
+
+Volume class members: []
+Volume members: [
+
+    Volume: Fixed! volume [ super : volume. ]
+
+    @Static! Liter! ReferenceUnit := Liter basicNew.
+    Unit! unit [ ^ReferenceUnit ]
+]

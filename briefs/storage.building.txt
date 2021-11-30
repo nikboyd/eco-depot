@@ -1,0 +1,16 @@
+[Quote:][narrative]
+"Each storage building is licensed to hold a maximum number of drums."
+
+### Derivations
+
+* “licensed to hold” = _stores_
+* each storage building _stores_ some drums
+* “licensed to hold” = **storage license**
+* each storage building _has_ some drum storage licenses
+
+### Implications
+
+* each drum storage license _limits_ a storage building drum count
+* each storage building _has_ a drum storage limit
+
+[narrative]: ../original-narrative.md#drum-storage

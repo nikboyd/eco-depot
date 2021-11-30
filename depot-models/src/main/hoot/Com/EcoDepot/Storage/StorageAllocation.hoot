@@ -1,0 +1,117 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Hoot Magnitudes Integer import.
+Hoot Magnitudes SmallInteger importStatics.
+Com EcoDepot Assets importAll.
+
+Object subclass: StorageAllocation.
+"A drum storage allocation."
+
+StorageAllocation class members: "prospecting" [
+
+    SortedCollection? StorageAllocation! "allocation prospects containing a given hazard"
+    prospectsContaining: HazardKind! hazard [
+        ^((StorageBuilding type assetsLicensedFor: hazard) collect: [ : StorageBuilding! building |
+            StorageAllocation in: building with: hazard ]) asSortedCollection: self allocationSortBlock ]
+
+    DyadicPredicate! allocationSortBlock [ "sorts allocations in decreasing order by capacity"
+        ^[ : StorageAllocation! priorAlloc : StorageAllocation! nextAlloc |
+            priorAlloc remainingStorageCapacity > nextAlloc remainingStorageCapacity ] ]
+]
+
+StorageAllocation class members: "sharing storage" [
+
+    Integer! "largest drum count portion shareable between some allocations"
+    maximalShareBetween: Set? StorageAllocation! allocations [
+        allocations isEmpty ifTrue: [ ^0 ]. ^(self capacityRemaining: allocations) / allocations size ]
+
+    Integer! "smallest drum count portion shareable between some allocations"
+    minimalShare: Integer! drumCount between: Set? StorageAllocation! allocations [
+        allocations isEmpty ifTrue: [ ^0 ]. ^drumCount / allocations size ]
+
+    Integer! "total building storage capacity of some allocations"
+    capacityOfBuildings: Set? StorageAllocation! allocations [
+        ^self sum: [ : StorageAllocation! allocation | allocation buildingStorageCapacity ] across: allocations ]
+
+    Integer! "total remaining storage capacity of some allocations"
+    capacityRemaining: Set? StorageAllocation! allocations [
+        ^self sum: [ : StorageAllocation! allocation | allocation remainingStorageCapacity ] across: allocations ]
+
+    Integer! "totals a specific value across given allocations"
+    sum: MonadicValuable! access across: Set? StorageAllocation! allocations [
+        allocations isEmpty ifTrue: [ ^0 ].
+        FastInteger! count := Zero asFastInteger.
+        allocations do: [ : StorageAllocation! allocation | count += (access value: allocation). ].
+        ^count ]
+]
+
+StorageAllocation members: "describing allocations" [
+
+    @Property! HazardKind! hazard. "a kind of hazard"
+    @Property! Integer! drumCount. "a count of drums"
+    @Property! StorageBuilding! building. "a storage building"
+
+    StorageAllocation: StorageBuilding! storageBuilding : HazardKind! hazardKind [
+        building := storageBuilding.
+        hazard := hazardKind.
+    ]
+
+    @Static! StorageAllocation! "a new storage allocation"
+    in: StorageBuilding! storageBuilding with: HazardKind! hazardKind [
+        ^StorageAllocation basicNew: storageBuilding : hazardKind ]
+]
+
+StorageAllocation members: "allocating storage" [
+
+    Integer! "remaining building storage capacity before this allocation"
+    buildingStorageCapacity [ ^(self building drumStorage: self hazard) capacity ]
+
+    Integer! "remaining building storage capacity after this allocation"
+    remainingStorageCapacity [ ^self buildingStorageCapacity - self drumCount ]
+
+    Integer! "drum count that this allocation can consume"
+    consumableDrums: Integer! count [ ^self remainingStorageCapacity min: count ]
+
+    Integer! "largest drum count portion removable from the associated building"
+    releasableDrums: Integer! count [ ^self drumCount min: count ]
+
+    Integer! "remaining drum count after consuming as many as possible"
+    remainderAfterConsumingSome: Integer! count [
+        Integer! delta := self consumableDrums: count.
+        drumCount := drumCount + delta.
+        ^count - delta ]
+
+    transferDrums: Integer! count to: StorageAllocation! allocation [
+        "transfers as many drums as possible from this allocation to another"
+        Integer! transferDrums := allocation consumableDrums: (self releasableDrums: count).
+        allocation remainderAfterConsumingSome: transferDrums.
+        drumCount := drumCount - transferDrums.
+    ]
+]
+
+StorageAllocation members: "ensuring safe drum storage allocation" [
+
+    "this prospective allocation absorbs drums from some vulnerable others if needed"
+    reduceVulnerable: OrderedCollection? StorageAllocation! allocations [
+        Integer! reducedCapacity := ((self remainingStorageCapacity - 1) min: allocations size) value.
+        reducedCapacity timesRepeat: [ allocations removeFirst transferDrums: 1 to: self ].
+    ]
+
+    Boolean! "whether the allocated drums fill the building"
+    fillsBuilding [ ^self remainingStorageCapacity = 0 ]
+
+    Set? StorageAllocation! "allocations that (would) fill the neighboring buildings"
+    fullNeighbors: SortedCollection? StorageAllocation! allocations [
+        ^(self neighboringAllocations: allocations) select:
+            MonadicPredicate <- [ : StorageAllocation! alloc | alloc fillsBuilding ] ]
+
+    Boolean! "whether some allocations might make the depot vulnerable"
+    makesDepotVulnerableWith: SortedCollection? StorageAllocation! allocations [
+        ^self fillsBuilding and: [ (self fullNeighbors: allocations) notEmpty ] ]
+
+    Set? StorageAllocation! "allocations whose buildings neighbor the associated building"
+    neighboringAllocations: Collection? StorageAllocation! allocations [
+        ^((allocations asOrderedCollection copyWithout: self) select:
+            MonadicPredicate <- [ : StorageAllocation! alloc | alloc building neighbors: self building ]) asSet ]
+]

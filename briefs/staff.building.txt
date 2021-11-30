@@ -1,0 +1,10 @@
+[Quote:][narrative]
+"The drums are stored in special storage buildings; in the depot there are also buildings that house scientific
+and administrative staff."
+
+### Derivations
+
+See also [Depot Building][building]
+
+[narrative]: ../original-narrative.md#drum-storage
+[building]:depot.building.md

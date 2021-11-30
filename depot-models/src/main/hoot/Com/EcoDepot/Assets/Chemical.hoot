@@ -1,0 +1,13 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Object subclass: Chemical.
+"A chemical description."
+
+Chemical class members: []
+
+Chemical members: [
+
+    @Property! String! name.
+    @Property! HazardKind! hazard.
+]

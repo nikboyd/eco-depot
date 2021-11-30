@@ -1,0 +1,85 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Hoot Magnitudes Integer import.
+Com EcoDepot Measures importAll.
+Com EcoDepot Assets importAll.
+
+Object subclass: DepotSafety.
+"Ensures safe depot storage allocations."
+
+DepotSafety class members: "ensuring safety" [
+
+    "the building vulnerability perimeter distance."
+    Distance! vulnerabilityPerimeter [ ^DepotLocation type vulnerabilityPerimeter ]
+
+    OrderedCollection? StorageAllocation! "prospects that have safe storage capacity"
+    safeProspects: SortedCollection? StorageAllocation! allocations [
+        ^allocations select: [ : StorageAllocation! allocation | allocation fillsBuilding not ] toPredicate ]
+]
+
+DepotSafety members: "allocating storage space" [
+
+    Set? StorageAllocation! "available storage allocations if safely allocated"
+    allocate: Integer! drumCount containing: HazardKind! hazard [
+        SortedCollection? StorageAllocation! prospects := StorageAllocation type prospectsContaining: hazard.
+        Set? StorageAllocation! allocations := self distribute: drumCount over: prospects. "initial naive allocations"
+        allocations isEmpty ifTrue: [ ^allocations ]. "done if no allocations were possible"
+
+        OrderedCollection? StorageAllocation! vulnerables := self orderedVulnerabilities: allocations given: prospects.
+        vulnerables isEmpty ifTrue: [ ^allocations ]. "done if no (new) vulnerabilities exist"
+
+        ^self reduce: vulnerables using: prospects producing: allocations ]
+
+    Set? StorageAllocation! "assigned storage allocations distributed based on available storage capacity"
+    distribute: Integer! drumCount over: SortedCollection? StorageAllocation! allocations [
+        result := OrderedCollection new.
+        Integer! totalCapacity := StorageAllocation type capacityOfBuildings: Set <- allocations asSet.
+
+        allocations inject: (drumCount min: totalCapacity) into: [
+            : Integer! remainingDrums : StorageAllocation! allocation |
+            remainingDrums = 0 ifTrue: [ ^result asSet ].
+            result add: allocation.
+            allocation remainderAfterConsumingSome: remainingDrums ].
+
+        ^result asSet "should never reach here, but always provide a result" ]
+]
+
+DepotSafety members: "reducing vulnerability" [
+
+    OrderedCollection? StorageAllocation! "ordered vulnerabilities"
+    orderedVulnerabilities: Set? StorageAllocation! allocations
+    given: SortedCollection? StorageAllocation! prospects [
+        ^(self vulnerable: allocations with: prospects) asOrderedCollection ]
+
+    Set? StorageAllocation! "allocations making the depot vulnerable"
+    vulnerable: Set? StorageAllocation! allocations
+    with: SortedCollection? StorageAllocation! prospects [
+        ^allocations select: [ : StorageAllocation! allocation |
+            allocation makesDepotVulnerableWith: prospects ] toPredicate ]
+
+    Set? StorageAllocation! "some drum storage allocations"
+    reduce: OrderedCollection? StorageAllocation! vulnerables
+    using: SortedCollection? StorageAllocation! prospects
+    producing: Set? StorageAllocation! allocations [
+        "Reduces the drums assigned to some vulnerable allocations by transferring a single drum
+        from each to another prospective allocation that has some remaining storage capacity.
+        Adds each such prospect to the resulting allocations."
+
+        OrderedCollection? StorageAllocation! safeProspects := self type safeProspects: prospects.
+        [ safeProspects isEmpty or: [ vulnerables isEmpty ]] whileFalse: [
+            StorageAllocation! prospect := safeProspects removeFirst.
+            allocations add: (prospect reduceVulnerable: vulnerables).
+        ].
+        ^allocations ]
+
+    StorageAllocation! "a prospective allocation"
+    reduce: OrderedCollection? StorageAllocation! vulnerables
+    using: StorageAllocation! prospect [
+        "Reduces the drums assigned to some full allocations by transferring a single drum
+        from each to another prospective allocation that has some remaining storage capacity."
+
+        Integer! reducedCapacity := ((prospect remainingStorageCapacity - 1) min: vulnerables size) value.
+        reducedCapacity timesRepeat: [ vulnerables removeFirst transferDrums: 1 to: prospect ].
+        ^prospect ]
+]

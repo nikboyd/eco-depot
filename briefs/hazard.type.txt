@@ -1,0 +1,3 @@
+See [Safety Violation][safety-violation]
+
+[safety-violation]:safety.violation.md#narrative-source

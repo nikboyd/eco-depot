@@ -1,0 +1,14 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Quantity subclass: Weight.
+"A quantified weight."
+
+Weight class members: []
+Weight members: [
+
+    Weight: Fixed! weight [ super : weight. ]
+
+    @Static! Gram! ReferenceUnit := Gram basicNew.
+    Unit! unit [ ^ReferenceUnit ]
+]

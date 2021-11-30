@@ -1,0 +1,152 @@
+## Depot Building
+
+In the context of this [model](../domain-inventory.md), a [depot building][depot.building]
+
+<img align="right" src="../images/depot_building_has.svg" />
+
+<ul>
+ <li><i>has</i> a <a href="building.description.md">building description</a></li>
+ <li> </li>
+ <li> </li>
+ <li> </li>
+ <li> </li>
+ <li> </li>
+ <li> </li>
+ <li> </li>
+</ul>
+
+
+
+### Narrative Source
+
+[Quote:][narrative]
+"The [drums][drum] are stored in special [storage buildings][storage.building]; in the depot there are also buildings that house scientific
+and administrative staff."
+
+### Derivations
+
+<table>
+<tr><th align="left"> Phrases </th><th align="left"> Derivations </th></tr>
+<tr>
+<td style="vertical-align:top">
+
+* “[drums][drum] are stored” = _stores_
+*
+
+</td>
+<td style="vertical-align:top">
+
+* so: special [storage buildings][storage.building] _store_ [drums][drum]
+* also: [staff buildings][staff.building] _house_ scientific and administrative staff
+
+</td>
+</tr>
+</table>
+
+
+### Implications
+
+* the ECO depot _contains_ both [storage buildings][storage.building] and [staff buildings][staff.building]
+* a staff building _houses_ some staff members
+* a storage building _stores_ some [drums][drum]
+
+### Additional Concepts
+
+There are holes evident in the original narrative. Many of them were filled during the analysis
+through _semantic implication_. However, a few important elements of the domain are still missing.
+Also, several [depot management system][depot.management.system] use-cases are implied.
+We need to make those use-cases explicit and supply the missing domain elements.
+
+_Where is each building located?_
+* a [depot map][depot.map] locates the [depot buildings][depot.building]
+* their physical locations determine which buildings neighbor each other
+
+_How is the building information maintained?_
+* for each storage building, a [depot manager][depot.manager] enters [building description][building.description] into the system
+
+Each [building description][building.description] includes:
+* a (unique) building identifier
+* a physical description, including physical dimensions
+* a physical location of the building within the depot, its address
+* building identifiers of the neighboring buildings, in the [depot map][depot.map]
+* a drum storage limit from the building’s [drum storage license][drum.storage.license]
+* an initial [drum inventory][drum.inventory]
+
+[narrative]: ../original-narrative.md#drum-storage
+
+
+<div align="center"><b>&sect; &sect; &sect;</b></div>
+
+[EPA]: EPA.md
+[EPAs]: EPA.md
+[EPA.regulation]: EPA.regulation.md
+[EPA.regulations]: EPA.regulation.md
+[building.description]: building.description.md
+[building.descriptions]: building.description.md
+[chemical.description]: chemical.description.md
+[chemical.descriptions]: chemical.description.md
+[company.regulation]: company.regulation.md
+[company.regulations]: company.regulation.md
+[depot]: depot.md
+[depots]: depot.md
+[depot.building]: depot.building.md
+[depot.buildings]: depot.building.md
+[depot.distance.unit]: depot.distance.unit.md
+[depot.distance.units]: depot.distance.unit.md
+[depot.management]: depot.management.md
+[depot.managements]: depot.management.md
+[depot.management.system]: depot.management.system.md
+[depot.management.systems]: depot.management.system.md
+[depot.manager]: depot.manager.md
+[depot.managers]: depot.manager.md
+[depot.map]: depot.map.md
+[depot.maps]: depot.map.md
+[depot.monitoring]: depot.monitoring.md
+[depot.monitorings]: depot.monitoring.md
+[depot.volume.unit]: depot.volume.unit.md
+[depot.volume.units]: depot.volume.unit.md
+[depot.vulnerability]: depot.vulnerability.md
+[depot.vulnerabilities]: depot.vulnerability.md
+[depot.weight.unit]: depot.weight.unit.md
+[depot.weight.units]: depot.weight.unit.md
+[drum]: drum.md
+[drums]: drum.md
+[drum.collection]: drum.collection.md
+[drum.collections]: drum.collection.md
+[drum.delivery]: drum.delivery.md
+[drum.deliveries]: drum.delivery.md
+[drum.description]: drum.description.md
+[drum.descriptions]: drum.description.md
+[drum.identifier]: drum.identifier.md
+[drum.identifiers]: drum.identifier.md
+[drum.inventory]: drum.inventory.md
+[drum.inventories]: drum.inventory.md
+[drum.label]: drum.label.md
+[drum.labels]: drum.label.md
+[drum.storage]: drum.storage.md
+[drum.storages]: drum.storage.md
+[drum.storage.allocation]: drum.storage.allocation.md
+[drum.storage.allocations]: drum.storage.allocation.md
+[drum.storage.license]: drum.storage.license.md
+[drum.storage.licenses]: drum.storage.license.md
+[drum.storage.license.description]: drum.storage.license.description.md
+[drum.storage.license.descriptions]: drum.storage.license.description.md
+[hazard.type]: hazard.type.md
+[hazard.types]: hazard.type.md
+[hazardous.chemical]: hazardous.chemical.md
+[hazardous.chemicals]: hazardous.chemical.md
+[license.inventory]: license.inventory.md
+[license.inventories]: license.inventory.md
+[loading.bay]: loading.bay.md
+[loading.bays]: loading.bay.md
+[loading.bay.clerk]: loading.bay.clerk.md
+[loading.bay.clerks]: loading.bay.clerk.md
+[safety.violation]: safety.violation.md
+[safety.violations]: safety.violation.md
+[staff.building]: staff.building.md
+[staff.buildings]: staff.building.md
+[storage.building]: storage.building.md
+[storage.buildings]: storage.building.md
+[truck]: truck.md
+[trucks]: truck.md
+

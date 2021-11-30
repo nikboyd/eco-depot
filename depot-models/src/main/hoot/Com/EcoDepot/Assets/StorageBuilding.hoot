@@ -1,0 +1,22 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+DepotBuilding subclass: StorageBuilding.
+"A chemical drum storage building."
+
+StorageBuilding class members: "enumerating storage buildings" [
+
+    Dictionary? String : StorageBuilding! assetsLicensedFor: HazardKind! hazard [ 
+        ^StorageLicense type assetsLicensedFor: hazard ]
+]
+
+StorageBuilding members: "knowing storage licenses" [
+
+    Dictionary? HazardKind : StorageLicense! licenses := Dictionary new.
+]
+
+StorageBuilding members: "knowing drum storage" [
+
+    Dictionary? HazardKind : DrumStorage! storageRegistry := Dictionary new.
+    DrumStorage! drumStorage: HazardKind! hazard [ ^storageRegistry at: hazard ]
+]

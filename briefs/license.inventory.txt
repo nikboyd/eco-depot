@@ -1,0 +1,3 @@
+See [Drum Storage License][storage-license]
+
+[storage-license]:drum.storage.license.md#narrative-source

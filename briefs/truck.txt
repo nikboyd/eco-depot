@@ -1,0 +1,31 @@
+[Quote:][narrative]
+"When a truck arrives at the loading bay, the clerk enters the manifest accompanying the load and
+checks in the drums one at a time. As each drum is checked in, it is assigned an identifier."
+
+### Derivations
+
+<table>
+<tr><th align="left"> Phrases </th><th align="left"> Derivations </th></tr>
+<tr>
+<td style="vertical-align:top">
+
+* When ...
+
+</td>
+<td style="vertical-align:top">
+
+* a truck arrives at the loading bay
+
+</td>
+</tr>
+</table>
+
+### Implications
+
+* the ECO depot _contains_ a loading bay
+* a truck _delivers_ a drum load _to_ the loading bay
+* a drum load _contains_ drums
+
+
+[narrative]: ../original-narrative.md#drum-delivery
+

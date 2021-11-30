@@ -1,0 +1,48 @@
+[Quote:][narrative]
+"The ECO management wants to avoid litigation from their employees or the local council.
+They have introduced a company regulation that requires the depot manager be able to monitor the depot
+and to always be able to check if the depot is in a vulnerable state.
+The regulation states that a depot is vulnerable if any two neighboring buildings contain the maximum number of drums."
+
+
+### Derivations
+
+<table>
+<tr><th align="left"> Phrases </th><th align="left"> Derivations </th></tr>
+<tr>
+<td style="vertical-align:top">
+
+* monitor + ing = monitoring
+* vulnerable + ility = **vulnerability**
+* depot monitoring = _monitors_
+
+</td>
+<td style="vertical-align:top">
+
+* so: a company regulation _requires_ depot monitoring
+* 
+* and: a depot manager _monitors_ the depot _for_ vulnerability
+
+</td>
+</tr>
+</table>
+
+### Implications
+
+* the ECO management _introduced_ a company regulation
+* a company regulation requires that: a depot manager _monitors_ the depot
+* a depot manager _monitors_ whether the depot is in a vulnerable state
+
+
+### Mission Themes
+
+* the ECO management wants to _avoid_ litigation
+
+### Definitions
+
+* “building contains the maximum number of drums” = **full** storage building
+* **full** storage building = storage building drum count _equals_ building drum storage limit
+* the depot is vulnerable if: any two neighboring storage buildings are **full**
+* neighboring buildings = a storage building _neighbors_ another storage building
+
+[narrative]: ../original-narrative.md#depot-regulation

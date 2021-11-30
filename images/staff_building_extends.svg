@@ -1,0 +1,20 @@
+<svg width="12cm" height="6cm" viewbox="10 8 350 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><a xlink:href="../topics/staff.building.md"><g><rect style="fill: #add8e6" x="10" y="10" width="200" height="44"/>
+<rect style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000" x="10" y="10" width="200" height="44"/>
+<text style="fill: #000000; text-anchor: middle; font-family: sans-serif; font-style: normal; font-weight: 700" font-size="17" x="110" y="37"><tspan x="110" y="37">staff building</tspan>
+</text>
+</g>
+</a>
+<a xlink:href="../topics/depot.building.md"><g><rect style="fill: #bfbfbf" x="230" y="100" width="200" height="44"/>
+<rect style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000" x="230" y="100" width="200" height="44"/>
+<text style="fill: #000000; text-anchor: middle; font-family: sans-serif; font-style: normal; font-weight: 700" font-size="17" x="330" y="127"><tspan x="330" y="127">depot building</tspan>
+</text>
+</g>
+</a>
+<g><polyline style="fill: none; fill-opacity: 0; stroke-width: 2; stroke: #000000" points="230,122 110,122 110,54"/>
+<polygon points="230,122 215,132 215,112" style="fill: #000000"/>
+<g><rect style="fill: #ffffff" x="135" y="109" width="70" height="26"/>
+<text style="fill: #000000; text-anchor: middle; font-family: sans-serif; font-style: italic; font-weight: normal" font-size="18" x="0" y="0"><tspan x="170" y="126">extends</tspan>
+</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,33 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Hoot Magnitudes Integer import.
+
+Object subclass: StorageLicense.
+"An EPA drum storage license."
+
+StorageLicense class members: "registering storage buildings" [
+
+    Dictionary? String : StorageBuilding! assetsLicensedFor: HazardKind! hazard [ ^Registry at: hazard ]
+
+    Void! initialize [ "register empty collections"
+        Registry at: HazardKind type1 put: Dictionary new.
+        Registry at: HazardKind type2 put: Dictionary new.
+        Registry at: HazardKind type3 put: Dictionary new.
+    ]
+]
+
+StorageLicense members: "registering licenses" [
+
+    "storage buildings are registered by the hazard types for which they are licensed"
+    @Static! Dictionary? HazardKind : Dictionary! Registry := Dictionary new.
+    register [ (Registry at: self hazard) at: self building id put: self building. ]
+    remove   [ (Registry at: self hazard) removeKey: self building id. ]
+]
+
+StorageLicense members: "describing licensed storage" [
+
+    @Property! HazardKind! hazard.
+    @Property! Integer! storageLimit.
+    @Property! StorageBuilding! building.
+]

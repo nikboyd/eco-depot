@@ -1,0 +1,45 @@
+@Notice :'Copyright 2004,2020 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Hoot Magnitudes Integer import.
+
+Object subclass: HazardKind.
+"An EPA hazardous chemical classification."
+
+HazardKind class members: []
+HazardKind members: "registering hazards" [
+
+    @Static! Dictionary? Integer : HazardKind! Registry := Dictionary new.
+    @Static! @Final! HazardKind! UnknownHazard := HazardKind basicNew: 0.
+    @Static! Void! initializeRegistry [
+        #( 1 2 3 ) do: [ :Integer! id | HazardKind basicNew: id. ].
+        HazardKind type1 description: 'spent nuclear fuel'.
+        HazardKind type2 description: 'biological waste'.
+        HazardKind type3 description: 'mine tailings'.
+        UnknownHazard description: 'unknown'.
+    ]
+
+    register [ Registry at: self identifier put: self. ]
+]
+
+HazardKind members: "knowing hazard types" [
+
+    @Static! type1 [ ^HazardKind type: 1 ]
+    @Static! type2 [ ^HazardKind type: 2 ]
+    @Static! type3 [ ^HazardKind type: 3 ]
+
+    @Static! type: Integer! id [ ^Registry at: id ]
+    @Static! Integer! typeCount [ ^Registry size ]
+    @Static! Set? Integer! typeIDs [ ^Registry keys ]
+    @Static! OrderedCollection? HazardKind! types [ ^Registry values ]
+]
+
+HazardKind members: "classifying hazard types" [
+
+    @Property! Integer! identifier.
+    HazardKind: Integer! id [ self identifier: id. self register. ]
+    HazardKind: Java Lang Integer! id [ self : (SmallInteger from: id). ]
+
+    @Property! String! description.
+    String! printString [ ^'a chemical hazard type ', identifier printString, ' is ', self description ]
+]

@@ -1,0 +1,16 @@
+@Notice :'Copyright 2004,2021 Nikolas S Boyd.
+Permission is granted to copy this work provided this copyright statement is retained in all copies.'!
+
+Object subclass: @Abstract! Quantity.
+"A basic quantity."
+
+Quantity class members: []
+Quantity members:
+[
+    @Abstract! Unit! unit []
+
+    @Property! Fixed! amount.
+    @Protected! Quantity: Fixed! anAmount [ amount := anAmount. ]
+
+    String! printString [ ^self amount printString, ' ', self unit printString ]
+]

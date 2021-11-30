@@ -1,0 +1,96 @@
+Domain named: ECO hazardous chemical storage depot.
+
+depot := ECO hazardous chemical storage depot.
+depot -> hazardous chemical storage facility.
+
+depot distance unit -> unit.
+depot distance unit measures: feet.
+
+depot weight unit -> unit.
+depot weight unit measures: pounds.
+
+depot volume unit -> unit.
+depot volume unit measures: gallons.
+
+depot building has: building description.
+building description := { name, perimeter, location }.
+staff building -> depot building.
+storage building -> depot building.
+
+depot contains: staff buildings, storage buildings, loading bay.
+depot map finds: building in: depot with: location.
+depot map names: building in: depot with: name.
+
+staff building houses: staff members.
+staff building limits: staff members count.
+staff building vulnerable := [ vulnerable | false ].
+
+EPA := environmental protection agency.
+EPA publishes: hazardous chemical storage regulations.
+EPA regulates: hazardous chemical storage facilities.
+EPA classifies: hazardous chemical with: hazard type.
+hazard type := EPA hazard type.
+hazard types := ( type1, type2, type3 ).
+
+EPA regulations := EPA hazardous chemical storage regulations.
+depot complies: with: EPA regulations.
+
+depot management avoids: litigation.
+depot management system prevents: safety violations.
+depot management introduced: company regulation.
+company regulation requires: depot monitoring.
+company regulation defines: depot vulnerability.
+
+depot vulnerability := neighboring storage buildings are full.
+depot monitoring := depot manager monitors: depot for: depot vulnerability.
+
+drum storage := storage building stores: drums.
+drum storage license permits: drum storage per: hazard type.
+drum storage license limits: drum count per: hazard type.
+drum storage license description := { building name, hazard type, drum count limit }.
+EPA issues: drum storage license per: hazard type per: storage building.
+
+drum := hazardous chemical storage drum.
+drum contains: hazardous chemical.
+hazardous chemical classified: hazard type.
+chemical description := { name, volume, weight, hazard type }.
+
+drum identifier identifies: drum in: depot. "depot-wide unique ID"
+drum description := { drum identifier, chemical description }.
+drum description hazard type := [ hazard type | this chemical description hazard type ].
+drum label shows: drum description.
+
+drum collection := truck collects: drum load from: loading bay.
+drum delivery := truck delivers: drum load to: loading bay.
+drum storage allocation := depot management system allocates: drums to: storage building.
+
+loading bay receives: drum delivery.
+loading bay clerk notifies: system after: loading bay emptied.
+
+safety violation := EPA safety violation.
+safety violation when: storage building with: hazard type1 beside: hazard type2.
+depot safety violation   := [ violation: d | d storage buildings anyMatch: [ :b | b unsafe ]].
+
+storage building unsafe  := [ unsafe | ( this stores: hazard type2 ) and: [ this stores: hazard type3 ] ].
+storage building safe2   := [  safe2 | ( this stores: hazard type2 ) and: [ this stores: hazard type1 ] ].
+storage building safe3   := [  safe3 | ( this stores: hazard type3 ) and: [ this stores: hazard type1 ] ].
+
+storage building owns: drum inventory.
+drum inventory records: drum descriptions.
+drum inventory locates: drums per: storage building.
+drum inventory counts: drums per: hazard type.
+storage building drum count := [ count: h | ( this drum inventory select: [ :d | d hazard type = h ] ) size ].
+
+storage building has: license inventory.
+license inventory records: drum storage license descriptions.
+license inventory locates: drum storage licenses per: storage building.
+
+storage building full       := [ full: h     | ( this capacity: h ) = 0 ].
+storage building limit      := [ limit: h    | ( this license inventory at: h ) drum count limit ].
+storage building capacity   := [ capacity: h | ( this limit: h ) - ( this drum count: h ) ].
+storage building vulnerable := [ vulnerable  | hazard types anyMatch: [ :h | ( this full: h ) ] ].
+
+building neighbors := [ neighbors: b | ( this description perimeter distance: b description perimeter ) < 5.0 ].
+depot vulnerable :=
+    [ vulnerable | depot storage buildings anyMatch:
+        [ :b | b vulnerable and: [ b neighbors anyMatch: [ :n | n vulnerable ]]]].
