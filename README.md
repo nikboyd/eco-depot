@@ -106,6 +106,8 @@ The foregoing design sketches were used to develop [code sketches][code-sketches
 While there were several ordinary [business objects][depot-assets] and [industrial objects][depot-measures] found,
 there were also a few [enduring business themes][depot-storage] for this domain:
 [Depot Safety][safety-hoot] and [Storage Allocation][allocation-hoot].
+To rebuild the web site or run the provided example code, see the associated 
+[build instructions](BUILDME.md#site-build-instructions).
 
 
 [inventory]: domain-inventory.md#eco-hazardous-chemical-storage-depot-domain-inventory
@@ -122,7 +124,7 @@ there were also a few [enduring business themes][depot-storage] for this domain:
 [storage-drums]: depot-designs/storage-drums.svg
 [depot-buildings]: depot-designs/depot-buildings.svg
 [syntopica-tool]: https://github.com/nikboyd/syntopica/#syntopica
-[hoot-smalltalk]: https://gitlab.com/hoot-smalltalk/hoot-smalltalk#hoot-smalltalk
+[hoot-smalltalk]: https://github.com/nikboyd/hoot-smalltalk#hoot-smalltalk
 
 [code-sketches]: depot-models/README.md#eco-depot-model-classes
 [depot-assets]: depot-models/src/main/hoot/Com/EcoDepot/Assets/README.md#eco-depot-business-objects
