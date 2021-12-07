@@ -19,8 +19,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hoot-libs-url>https://maven.pkg.github.com/nikboyd/hoot-smalltalk/</hoot-libs-url>
-        <hoot-version>2021.1206.1352</hoot-version>
+        <hoot-libs-url>https://dl.cloudsmith.io/public/educery/hoot-libs/maven/</hoot-libs-url>
+        <hoot-version>2021.1206.2158</hoot-version>
     </properties>
 
     <repositories>
@@ -72,6 +72,11 @@
                         <dependency>
                             <groupId>hoot-smalltalk</groupId>
                             <artifactId>hoot-compiler-boot</artifactId>
+                            <version>${hoot-version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>hoot-smalltalk</groupId>
+                            <artifactId>hoot-compiler-bundle</artifactId>
                             <version>${hoot-version}</version>
                         </dependency>
                     </dependencies>

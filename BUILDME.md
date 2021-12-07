@@ -14,21 +14,11 @@ This runs the [Syntopica][syntopica-tool] tool in the base folder. <br/>
 ### Code Build Instructions
 
 The code sketch included in this repository uses [Hoot Smalltalk][hoot-smalltalk] for its examples.
-To build the sketched code, you will need credentials to access the [associated tools][get-credentials].
-
-First, you'll need to request the Hoot Smalltalk credentials from the author **nikboyd @ sonic.net**.
-And then, you'll need to set these up in your environment:
-
-```
-export GITHUB_USER=*******
-export GITHUB_PASS=**************
-```
-
-Once you have the required credentials and the requisite tools configured in your environment, 
+Once you have the requisite tools configured in your environment, 
 you can run the following command:
 
 ```
-mvn -U -B -s settings.xml clean install
+mvn -U -B clean install
 ```
 
 This will download the [Hoot compiler plugin][hoot-plugin] and bundled libraries.
